@@ -133,7 +133,8 @@ Installation
                       pattern:   ^/.*
                       fos_facebook:  true
                       anonymous: true
-                      logout: true
+                      logout:     
+                          handlers: [ fos_facebook.logout.handler ]
 
               access_control:
                   - { path: ^/secured/.*, role: [IS_AUTHENTICATED_FULLY] } # This is the route secured with fos_facebook
